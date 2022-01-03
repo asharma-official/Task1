@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -23,6 +24,7 @@ class Menu {
 	private String id;
 	private String value;
 	private String height;
+	private Popup popup;
 	@Override
 	public String toString() {
 		return "Menu [id=" + id + ", value=" + value + ", height=" + height + ", popup=" + popup + "]";
@@ -51,15 +53,14 @@ class Menu {
 	public void setPopup(Popup popup) {
 		this.popup = popup;
 	}
-	private Popup popup;
 }
 
 class Popup{
-	MenuItem[] menuitem;
+	 List<MenuItem> menuitem;
 
 	@Override
 	public String toString() {
-		return "Popup [menuitem=" + Arrays.toString(menuitem) + "]";
+		return "Popup [menuitem=" + menuitem + "]";
 	}
 }
 
